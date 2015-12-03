@@ -69,10 +69,10 @@ int main(void)
 {
    int iter = 0;
 
-	//create arrays
-	sort_data sortAry1[100];
-	sort_data sortAry5[500];
-	sort_data sortAry10[1000];
+   //create arrays
+   sort_data sortAry1[100];
+   sort_data sortAry5[500];
+   sort_data sortAry10[1000];
 
 	//initialize random seed
 	srand(time(NULL));
@@ -277,8 +277,8 @@ void fill_array(sort_data sortAry[], int n)
 {
    for (int i = 0; i < n; i++)
    {
-      sortAry[i].key = rand();
-      sortAry[i].val = (float)rand();
+      sortAry[i].key = rand() % 300000;
+      sortAry[i].val = ((float)((rand() % 850000)) / ((rand() % 9) + 1));
    }
 }
 
